@@ -18,5 +18,6 @@ provider "aws" {
 
 # terraform {
 #   backend "s3" {
+# for storing backend on s3
 #   }
 # }
