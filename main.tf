@@ -352,6 +352,14 @@ resource "aws_route53_record" "dev-ns" {
   ttl     = "300"
   records = [aws_eip.lb.public_ip]
 }
+resource "aws_ecr_repository" "for_pokemon" {
+  name = "poke-repo"
+  image_tag_mutability = "MUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+}
 
 # resource "aws_cloudwatch_log_group" "event_sec" {
 #   name = "scale"
