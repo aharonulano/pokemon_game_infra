@@ -6,7 +6,7 @@ variable "account" {
 variable "profile_name" {
   description = "(Required) profile name"
   type        = string
-  default     = "au-test"
+  default     = "test"
 }
 
 variable "aws_region" {
